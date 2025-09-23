@@ -3,11 +3,51 @@ import java.util.Scanner;
 public class BankAccountMenu {
     public static void main(String[] args) {
         // TODO: Implement the bank account menu
+
+       Scanner sc = new Scanner(System.in);
         // 1. Create a double variable for balance
+        double moneyhave = 0;
+
         // 2. Create a while loop for the menu
-        // 3. Display the menu options
+        boolean run = true;
+        while (run = true){
+            // 3. Display the menu options
+            System.out.println("menu");
+            System.out.println("1. add money");
+            System.out.println("2. withdraw money");
+            System.out.println("3. check balence");
+            System.out.println("4. exit");
+            System.out.print("your choise: ");
+            int choice = sc.nextInt();
+
+            // 5. Use switch statement to handle menu choices
+            // 6. Implement add money, withdraw money, check balance, and exit functionality
+            switch (choice) {
+                case 1:
+                    System.out.print("\nadd:  ");
+                    double money = sc.nextDouble();
+                    System.out.println("your balence is: " + (money + moneyhave)+ "\n");
+                    break;
+                case 2 :
+                    System.out.println("withdraw: ");
+                    money = sc.nextDouble();
+                    if (money < moneyhave){
+
+                    System.out.println( "your balence is: " + (moneyhave - money));
+                    }
+                    else {
+                        System.out.println("insuficent funds");
+                    }
+                    break;
+                case 3:
+                    System.out.println("your balence is : " + moneyhave);
+                    break;
+                case 4:
+                    run = false;
+                    break;
+            }
+
+        }
         // 4. Use Scanner to read user input
-        // 5. Use switch statement to handle menu choices
-        // 6. Implement add money, withdraw money, check balance, and exit functionality
     }
 }
