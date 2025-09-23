@@ -26,12 +26,14 @@ public class BankAccountMenu {
                 case 1:
                     System.out.print("\nadd:  ");
                     double money = sc.nextDouble();
-                    System.out.println("your balence is: " + (money + moneyhave)+ "\n");
+                    if ( money >0 ) {
+                        System.out.println("your balence is: " + (money + moneyhave) + "\n");
+                    }
                     break;
                 case 2 :
                     System.out.println("withdraw: ");
                     money = sc.nextDouble();
-                    if (money < moneyhave){
+                    if (money < moneyhave && moneyhave>0){
 
                     System.out.println( "your balence is: " + (moneyhave - money));
                     }
