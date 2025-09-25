@@ -39,7 +39,7 @@ public class BankAccountMenu {
                 case 2 :
                     System.out.println("withdraw: ");
                     money = sc.nextDouble();
-                    if (money < moneyhave && moneyhave>0)
+                    if (money <= moneyhave && moneyhave>0)
                     {
                         moneyhave -= money;
                     System.out.println( "your balence is: " + moneyhave);
