@@ -6,20 +6,21 @@ public class BankAccountMenu {
 
        Scanner sc = new Scanner(System.in);
         // 1. Create a double variable for balance
-        double moneyhave = 0;
+        double moneyhave = 0.0;
 
         // 2. Create a while loop for the menu
         boolean run;
-        while (run = true){
+        run = true;
+        while (run)
+        {
             // 3. Display the menu options
             System.out.println("menu");
             System.out.println("1. add money");
             System.out.println("2. withdraw money");
             System.out.println("3. check balence");
-            System.out.println("4. exit");
+            System.out.println("4. exit\n");
             System.out.print("your choise: ");
             int choice = sc.nextInt();
-
 
             // 5. Use switch statement to handle menu choices
             // 6. Implement add money, withdraw money, check balance, and exit functionality
