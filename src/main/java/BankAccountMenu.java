@@ -9,7 +9,7 @@ public class BankAccountMenu {
         double moneyhave = 0;
 
         // 2. Create a while loop for the menu
-        boolean run = true;
+        boolean run;
         while (run = true){
             // 3. Display the menu options
             System.out.println("menu");
@@ -20,6 +20,7 @@ public class BankAccountMenu {
             System.out.print("your choise: ");
             int choice = sc.nextInt();
 
+
             // 5. Use switch statement to handle menu choices
             // 6. Implement add money, withdraw money, check balance, and exit functionality
             switch (choice) {
@@ -29,12 +30,15 @@ public class BankAccountMenu {
                     if ( money >0 ) {
                         System.out.println("your balence is: " + (money + moneyhave) + "\n");
                     }
+                    else {
+                        System.out.println("error");
+                    }
                     break;
                 case 2 :
                     System.out.println("withdraw: ");
                     money = sc.nextDouble();
-                    if (money < moneyhave && moneyhave>0){
-
+                    if (money < moneyhave && moneyhave>0)
+                    {
                     System.out.println( "your balence is: " + (moneyhave - money));
                     }
                     else {
