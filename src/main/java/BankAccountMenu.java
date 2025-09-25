@@ -29,7 +29,8 @@ public class BankAccountMenu {
                     System.out.print("\nadd:  ");
                     double money = sc.nextDouble();
                     if ( money >0 ) {
-                        System.out.println("your balence is: " + (money + moneyhave) + "\n");
+                        moneyhave += money;
+                        System.out.println("your balence is: " + moneyhave + "\n");
                     }
                     else {
                         System.out.println("error");
@@ -40,7 +41,8 @@ public class BankAccountMenu {
                     money = sc.nextDouble();
                     if (money < moneyhave && moneyhave>0)
                     {
-                    System.out.println( "your balence is: " + (moneyhave - money));
+                        moneyhave -= money;
+                    System.out.println( "your balence is: " + moneyhave);
                     }
                     else {
                         System.out.println("insuficent funds");
