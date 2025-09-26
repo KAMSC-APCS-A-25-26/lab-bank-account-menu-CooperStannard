@@ -14,7 +14,7 @@ public class BankAccountMenu {
         while (run)
         {
             // 3. Display the menu options
-            System.out.println("menu");
+            System.out.println("----menu----");
             System.out.println("1. add money");
             System.out.println("2. withdraw money");
             System.out.println("3. check balence");
