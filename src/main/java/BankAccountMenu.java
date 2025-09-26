@@ -6,7 +6,7 @@ public class BankAccountMenu {
 
        Scanner sc = new Scanner(System.in);
         // 1. Create a double variable for balance
-        double moneyhave = 0.0;
+        double moneyhave = 0.0, money;
 
         // 2. Create a while loop for the menu
         boolean run;
@@ -15,7 +15,7 @@ public class BankAccountMenu {
         {
             // 3. Display the menu options
             System.out.println("----menu----");
-            System.out.println("1. add money");
+            System.out.println("1. Add money");
             System.out.println("2. withdraw money");
             System.out.println("3. check balence");
             System.out.println("4. exit\n");
@@ -27,10 +27,10 @@ public class BankAccountMenu {
             switch (choice) {
                 case 1:
                     System.out.print("\nadd:  ");
-                    double money = sc.nextDouble();
+                    money = sc.nextDouble();
                     if ( money >0 ) {
                         moneyhave += money;
-                        System.out.println("your balence is: " + moneyhave + "\n");
+                        System.out.println("your balance is: " + moneyhave + "\n");
                     }
                     else {
                         System.out.println("error");
@@ -42,14 +42,14 @@ public class BankAccountMenu {
                     if (money <= moneyhave && moneyhave>0)
                     {
                         moneyhave -= money;
-                    System.out.println( "your balence is: " + moneyhave);
+                    System.out.println( "your balance is: " + moneyhave);
                     }
                     else {
-                        System.out.println("insuficent funds");
+                        System.out.println("insufficient funds\n");
                     }
                     break;
                 case 3:
-                    System.out.println("your balence is : " + moneyhave);
+                    System.out.println("your balance is : " + moneyhave);
                     break;
                 case 4:
                     run = false;
